@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Predictor</title>
+</head>
+<body>
+    <h1>Shape Predictor</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Predict Shape</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.querySelector('form').onsubmit = async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            document.getElementById('result').textContent = result.shape || result.error;
+        }
+    </script>
+</body>
+git init
+git add .
+git commit -m "Initial commit"
+</html>
