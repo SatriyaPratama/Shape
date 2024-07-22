@@ -2,7 +2,8 @@ venv\Scripts\activate
 
 cd venv
 
+pip install streamlit tensorflow pillow
+
 streamlit run app.py
 
 
-pip install streamlit tensorflow pillow
