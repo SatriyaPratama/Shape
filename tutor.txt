@@ -1,9 +1,10 @@
-venv\Scripts\activate
-
-cd venv
-
-pip install streamlit tensorflow pillow
-
-streamlit run app.py
-
-
+step by step untuk merunning website shape recognition secara local
+1. download semua folder dan file yang tersedia
+2. jadikan disatu file dengan format nama yang anda inginkan (contoh: WebShape)
+3. buka folder sampai dengan folder venv
+4. kemudian ganti path yang folder anda menjadi "cmd"
+5. pastikan anda sudah menginstall python
+6. masukkan command "python -m venv venv"
+7. masukkan command "venv\Scripts\activate" untuk mengaktifkan venv sehingga bisa mendownload streamlit
+8. masukkan command "pip install streamlit tensorflow pillow" untuk menginstall library streamlit
+9. masukkan command "streamlit run app.py" untuk menampilkan website shape recognition
